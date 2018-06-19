@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Infrastructure.Authorization.Exceptions
 {
-    class UserNotFoundException : Exception
+    public class UserNotFoundException : Exception
     {
         public UserNotFoundException()
         {

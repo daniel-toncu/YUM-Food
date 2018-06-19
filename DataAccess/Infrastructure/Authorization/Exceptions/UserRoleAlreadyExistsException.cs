@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Infrastructure.Authorization.Exceptions
 {
-    class UserRoleAlreadyExistsException : Exception
+    public class UserRoleAlreadyExistsException : Exception
     {
         public UserRoleAlreadyExistsException()
         {

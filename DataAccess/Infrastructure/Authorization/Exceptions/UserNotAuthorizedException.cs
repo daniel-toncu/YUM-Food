@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Infrastructure.Authorization.Exceptions
 {
-    class UserNotAuthorizedException : Exception
+    public class UserNotAuthorizedException : Exception
     {
         public UserNotAuthorizedException()
         {

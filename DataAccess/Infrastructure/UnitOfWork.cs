@@ -21,8 +21,18 @@ namespace DataAccess.Infrastructure
         private IRepository<OrderType> orderTypeRepository;
         private IRepository<OrderState> orderStateRepository;
 
+        private IRepository<Dish> dishRepository;
+
         private IRepository<RestaurantRating> restaurantRatingRepository;
         private IRepository<RestaurantReview> restaurantReviewRepository;
+
+        private IRepository<DishRating> dishRatingRepository;
+        private IRepository<DishReview> dishReviewRepository;
+
+        private IRepository<ShoppingCart> shoppingCartRepository;
+
+        private IRepository<Order> orderRepository;
+        private IRepository<OrderItem> orderItemRepository;
 
         public IRepository<UserProfile> UserProfileRepository
         {
@@ -115,6 +125,19 @@ namespace DataAccess.Infrastructure
             }
         }
 
+        public IRepository<Dish> DishRepository
+        {
+            get
+            {
+                if (this.dishRepository == null)
+                {
+                    this.dishRepository = new Repository<Dish>(_context);
+                }
+
+                return this.dishRepository;
+            }
+        }
+
         public IRepository<RestaurantRating> RestaurantRatingRepository
         {
             get
@@ -138,6 +161,71 @@ namespace DataAccess.Infrastructure
                 }
 
                 return this.restaurantReviewRepository;
+            }
+        }
+
+        public IRepository<DishRating> DishRatingRepository
+        {
+            get
+            {
+                if (this.dishRatingRepository == null)
+                {
+                    this.dishRatingRepository = new Repository<DishRating>(_context);
+                }
+
+                return this.dishRatingRepository;
+            }
+        }
+
+        public IRepository<DishReview> DishReviewRepository
+        {
+            get
+            {
+                if (this.dishReviewRepository == null)
+                {
+                    this.dishReviewRepository = new Repository<DishReview>(_context);
+                }
+
+                return this.dishReviewRepository;
+            }
+        }
+
+        public IRepository<ShoppingCart> ShoppingCartRepository
+        {
+            get
+            {
+                if (this.shoppingCartRepository == null)
+                {
+                    this.shoppingCartRepository = new Repository<ShoppingCart>(_context);
+                }
+
+                return this.shoppingCartRepository;
+            }
+        }
+
+        public IRepository<Order> OrderRepository
+        {
+            get
+            {
+                if (this.orderRepository == null)
+                {
+                    this.orderRepository = new Repository<Order>(_context);
+                }
+
+                return this.orderRepository;
+            }
+        }
+
+        public IRepository<OrderItem> OrderItemRepository
+        {
+            get
+            {
+                if (this.orderItemRepository == null)
+                {
+                    this.orderItemRepository = new Repository<OrderItem>(_context);
+                }
+
+                return this.orderItemRepository;
             }
         }
 
